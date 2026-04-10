@@ -93,17 +93,17 @@ public class RefugioAnimales {
     // OPCION 2
     public static void registrarEspecie(Scanner scanner, Set<String> especies) {
 
-        System.out.println("Ingrese la especie: ");
+        System.out.println("Ingresa el nombre de la especie: ");
         String nombreEspecie = scanner.nextLine().trim().toLowerCase();
 
         // verificamos si la especie ya existe
         if (especies.contains(nombreEspecie)) {
-            System.out.println("La especie ya fue registrada, intenta con otra");
+            System.out.println("Error: Esa especie ya está registrada.");
         } else {
 
             // si no existe se agrega al set
             especies.add(nombreEspecie);
-            System.out.println("La especie " + nombreEspecie + " fue agregada con éxito");
+            System.out.println("La especie " + nombreEspecie + " registrada correctamente.");
         }
     }
 
